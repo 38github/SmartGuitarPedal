@@ -6,6 +6,13 @@ build64(){
     cmake --build build --config Release -j4
 }
 
+# Not in the original code ###
+export CFLAGS="-Ofast -flto"
+export CXXFLAGS="-Ofast -flto"
+export LDFLAGS="-Ofast -flto"
+##############################
+
+
 # exit on failure
 set -e
 
